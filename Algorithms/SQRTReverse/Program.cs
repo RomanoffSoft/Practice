@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
-
+//Посчитать квадратный корень у чисел, вводимых с кучей пробелов,
+//в обратном порядке. 
 namespace SQRTReverse
 {
     class Program
@@ -15,7 +16,7 @@ namespace SQRTReverse
             sw.Start();
             for (int i=Nums.Length-1;i>=0;i--)
             {
-               double root = DoQuadRoot(Double.Parse(Nums[i]),10);
+               double root = DoQuadRoot(Double.Parse(Nums[i]),4);
                Console.WriteLine(root);
             }
             sw.Stop();
@@ -24,7 +25,7 @@ namespace SQRTReverse
             sw.Start();
              for (int i=Nums.Length-1;i>=0;i--)
             {
-               double root = DoQuadRootFaster(Double.Parse(Nums[i]),0.000000001);
+               double root = DoQuadRootFaster(Double.Parse(Nums[i]),0.0001);
                Console.WriteLine(root);
             }
             sw.Stop();
